@@ -29,6 +29,7 @@ Connecting to websocket launches the selected server. To re-launch after stop or
 	- A better way to relaunch the server.
 	- Neater, more secure code. 
 - [ ] Authentication
+- [ ] Cross-platform (linux support)
 
 
 ### Todo Features:
