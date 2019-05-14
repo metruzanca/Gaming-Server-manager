@@ -5,22 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        #output{
-            padding: 5px;
-            overflow-y: scroll;
-            height: 400px;
-            width: 800px;
-            border: 1px solid gray;
-            font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
-        }
-        #input{
-            width: 740px;
-        }
-        #btnSend{
-            width: 58px;
-        }
-    </style>    
+<link rel="stylesheet" href="./main.css">  
 </head>
 <body>
     <h2>Server Console</h2>
@@ -30,88 +15,7 @@
     <input id="input" type="text" disabled="true" placeholder="Server command">
     <button id="btnSend" disabled="true">Send</button>
     
-    
-    
-    
-    <script language="javascript" type="text/javascript">
-        
-        const wsUri = "ws://localhost:8080/";
-        const status = document.getElementById("status");
-        const output = document.getElementById("output");
-        
-        function init() {
-            ws = new WebSocket(wsUri);
-            ws.onopen = function (evt) { onOpen(evt) };
-            ws.onclose = function (evt) { onClose(evt) };
-            ws.onmessage = function (evt) { onMessage(evt) };
-            ws.onerror = function (evt) { onError(evt) };
-        }
-        
-        function onOpen(evt) {
-            setStatus("Connected");
-            document.getElementById("input").disabled = false;
-            document.getElementById("btnSend").disabled = false;
-        }
-        
-        function onClose(evt) {
-            setStatus("Disconnected");
-        }
-        
-        function onMessage(evt) {
-            writeToScreen(evt.data);
-            //ws.close();
-        }
-        
-        function onError(evt) {
-            writeToScreen(`<span style="color: red;">${evt.data}</span>`);
-        }
-        
-        function doSend(message) {
-            writeToScreen(`${message}`);
-            ws.send(`${message}`);
-        }
-        
-        function setStatus(message) {
-            status.innerHTML = message;
-        }
-
-        function writeToScreen(message) {
-            var pre = document.createElement("p");
-            pre.style.wordWrap = "break-word";
-            pre.innerHTML = format(message);
-            output.appendChild(pre);
-            updateScroll();
-        }
-        
-        window.addEventListener("load", init, false);
-        
-        document.getElementById('btnSend').addEventListener('click', function () {
-            if (!document.getElementById('input').value.trim()) {
-                document.getElementById('input').value = "";
-                return;
-            }
-            doSend(document.getElementById('input').value);
-            document.getElementById('input').value = "";
-        });
-
-        document.getElementById('input').addEventListener('keydown', (function (e) {
-            if (e.keyCode === 13) {
-                if (!document.getElementById('input').value.trim()) {
-                    document.getElementById('input').value = "";
-                    return;
-                }
-                doSend(document.getElementById('input').value);
-                document.getElementById('input').value = "";
-            }
-        }));
-
-        function updateScroll() {
-            var element = document.getElementById("output");
-            element.scrollTop = element.scrollHeight;
-        }
-
-
-    </script>
+    <script src="./ws.js"></script>
     <script src="./formatMcLogs.js"></script>
 </body>
 

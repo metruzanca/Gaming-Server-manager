@@ -1,0 +1,14 @@
+#output{
+    padding: 5px;
+    overflow-y: scroll;
+    height: 400px;
+    width: 800px;
+    border: 1px solid gray;
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#input{
+    width: 740px;
+}
+#btnSend{
+    width: 58px;
+}
