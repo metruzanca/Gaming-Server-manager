@@ -1,0 +1,28 @@
+{
+  "name": "server-process-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metruzanca/Server-process-manager.git"
+  },
+  "keywords": [
+    "process",
+    "manager"
+  ],
+  "author": "Samuele Zanca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metruzanca/Server-process-manager/issues"
+  },
+  "homepage": "https://github.com/metruzanca/Server-process-manager#readme"
+}
