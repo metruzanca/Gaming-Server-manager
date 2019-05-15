@@ -24,18 +24,26 @@ Connecting to websocket launches the selected server. To re-launch after stop or
 
 ### Main Todos
 
+- [ ] Authentication using JWT
+- [ ] 
 - [ ] Fix/make UI/UX
 - [ ] Refactor `app.js`
+	- option for Auto restart on crash
+		- add a toggle/buttons to actually stop the server near console / console commands that are intecepted by backend.
 	- A better way to relaunch the server.
+	- crash logging
 	- Neater, more secure code. 
-- [ ] Authentication
 - [ ] Cross-platform (linux support)
 
+- [ ] Implement Docker/container system?
 
 ### Todo Features:
 
+- [ ] More games: e.g. Gmod
 - [ ] Select Mc version
 	- Build new spigot/bukkit jar if not available.
 - [ ] Select world
 - [ ] As admin: Filter allowed commands via webterminal
 - [ ] Decoupled Live Map module?
+	- wait for dynmap to update
+- [ ] Select game
