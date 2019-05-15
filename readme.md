@@ -25,7 +25,6 @@ Connecting to websocket launches the selected server. To re-launch after stop or
 ### Main Todos
 
 - [ ] Authentication using JWT
-- [ ] 
 - [ ] Fix/make UI/UX
 - [ ] Refactor `app.js`
 	- option for Auto restart on crash
