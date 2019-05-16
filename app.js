@@ -1,4 +1,5 @@
 const express = require('express')
+const favicon = require('serve-favicon')
 const proc = require('child_process')
 const WebSocket = require('ws')
 const app = express()
@@ -10,6 +11,11 @@ const command = ["java", ['-Xms1G', '-Xmx3G', '-jar', serverJar, 'nogui'], {cwd:
 app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`)
 });
+
+// app.get('/favicon.ico', (req, res) => {
+//     res.sendFile(`${__dirname}/logo.png`)
+// });
+app.use(favicon(`${__dirname}/public/favicon.png`))
 
 app.listen(port, () => {
     console.log(`Express app listening on port ${port}!`)

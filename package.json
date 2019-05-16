@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.16.4",
+    "serve-favicon": "^2.5.0",
     "ws": "^7.0.0"
   },
   "devDependencies": {},
