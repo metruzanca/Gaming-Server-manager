@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Server Console</title>
+    <title>Minecraft Server Console</title>
 <link rel="stylesheet" href="./main.css">  
 <link rel="shortcut icon" type="image/png" href="./faviconDark.png" />
 </head>
 <body>
-    <h2>Server Console</h2>
-    
-    <p id="status"></p>
-    <div id="output"></div>
-    <input id="input" type="text" disabled="true" placeholder="Server command">
-    <button id="btnSend" disabled="true">Send</button>
-    
+    <div id="container">  
+        <div id="header">
+            <span>Logo</span>
+        </div>
+        <!-- Menu -->
+        <div id="menu">
+            <p>Status: <span id="status">Offline</span></p>
+            <button id="toggle-server">Start Server</button><br>
+            <button>Restart</button><br>
+            <button>Auto Restart Toggle</button><br>
+            <button>Install Plugin</button>
+            <div id="info">
+                <p>player count: 0/20</p>
+                <p>Online time: time now - time started = ms online for </p>
+            </div>
+            <p>features</p>
+            <p>features</p>
+            <p>features</p>
+            <p>features</p>
+        </div> 
+        <!-- Console -->
+        <div id="console">
+            <div id="output"></div>
+            <div id="input">
+                <input id="txt-input" type="text" disabled="true" placeholder="Server command">
+                <button id="btnSend" disabled="true">Send</button>
+            </div>
+        </div>
+    </div>
+        
+    <script src="./public/console.js"></script> <!-- remove pub -->
     <script src="./ws.js"></script>
     <script src="./formatMcLogs.js"></script>
 </body>
