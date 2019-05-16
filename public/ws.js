@@ -12,7 +12,7 @@ function init() {
 
 function onOpen(evt) {
     setStatus("Connected");
-    document.getElementById("input").disabled = false;
+    document.getElementById("txt-input").disabled = false;
     document.getElementById("btnSend").disabled = false;
 }
 

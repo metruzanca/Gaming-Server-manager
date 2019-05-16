@@ -4,3 +4,4 @@ node_modules/
 testing.js
 color.js
 public/ResourcePack.zip
+.vscode/
